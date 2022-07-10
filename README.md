@@ -1,33 +1,29 @@
-spring
-react
-blank
-prototype
+# spring react prototype
 
-*
-Gradle
-7.4
-*
-Spring
-2.7
-*
-React
-18.1
+* Java 17
+* Gradle 7
+* Spring 2.7
+* React 18
+* Webpack 5
+* Ts-Loader
+* Eslint 8
+* Prettier
+* Lodash
 
-`
-to run:
+## Instructions
+To run in prod mode (http://localhost:8080):
+
+```bash
+./gradlew clean build bootRun
+```
+
+To run on dev mode:
+Backend, runs on http://localhost:8080
+```bash
 ./gradlew bootRun
-`
+```
 
->
-React
-main
-page:
-localhost:
-8080
-
->
-Spring
-rest
-endpoint :
-localhost:
-8080/hello
+Frontend, navigate to ./frontend, runs on http://localhost:4000:
+```bash
+npm start
+```
