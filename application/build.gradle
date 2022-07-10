@@ -11,14 +11,15 @@ apply plugin: 'application'
 apply plugin: 'org.springframework.boot'
 
 bootJar {
-  mainClassName = 'example.Application'
+  mainClass = 'example.Application'
+  dependsOn(jar)
 }
 
 bootRun {
   systemProperties = System.properties
 }
 
-task copyWebApp(type: Copy) {
+task copyWebApp(type: Copy, dependsOn: ':frontend:build') {
   from "$rootDir/frontend/build"
   into "$rootDir/application/build/classes/main/static/."
   exclude 'libs**'

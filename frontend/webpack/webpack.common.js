@@ -7,15 +7,15 @@ module.exports = {
   entry: './src/index.tsx',
   stats: {
     errorDetails: true,
-    children: true
+    children: true,
   },
   output: {
     path: dist,
     filename: './scripts/bundle.js',
-    clean: true
+    clean: true,
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".jsx"]
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
   module: {
     rules: [
@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.s?css$/,
-        use: ["style-loader", "css-loader", "sass-loader"]
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
     ],
   },
@@ -38,12 +38,16 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      template: path.resolve(__dirname, '../public/index.html')
+      template: path.resolve(__dirname, '../public/index.html'),
     }),
     new CopyWebpackPlugin({
       patterns: [
-        {from: 'public', to: dist, globOptions: {ignore: ['**/index.html']}}
+        {
+          from: 'public',
+          to: dist,
+          globOptions: { ignore: ['**/index.html'] },
+        },
       ],
-    })
-  ]
+    }),
+  ],
 };
