@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src="/assets/logo512.png" className="App-logo" alt="logo" />
         <p>
-          Hello World!!322212
+          Hello World!
         </p>
         <Counter></Counter>
       </header>
