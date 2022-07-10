@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 const dist = path.resolve(__dirname, '../dist');
 
@@ -10,7 +11,8 @@ module.exports = {
     },
     output: {
         path: dist,
-        filename: 'bundle.js',
+        filename: './scripts/bundle.js',
+        clean: true
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx"]
@@ -37,6 +39,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             hash: true,
             template: path.resolve(__dirname, '../public/index.html')
-        })
+        }),
+        new CopyWebpackPlugin({ 
+            patterns: [
+                { from: 'public', to: dist, globOptions: { ignore: ['**/index.html'] } }
+            ],
+         })
     ]
 };

@@ -22,4 +22,9 @@ task npmBuild(type: NpmTask, dependsOn: 'npm-install') {
     args = ['run', 'build']
 }
 
-jar.dependsOn(npmBuild)
+task copyDist(type: Copy, dependsOn: 'npmBuild') {
+    from "${project.projectDir}/dist"
+    into "${project.buildDir}/."
+}
+
+jar.dependsOn(copyDist)
