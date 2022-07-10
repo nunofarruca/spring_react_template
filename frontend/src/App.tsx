@@ -1,5 +1,4 @@
 import './App.scss';
-import { Counter } from './Counter';
 
 function App() {
   return (
@@ -7,7 +6,6 @@ function App() {
       <header className="App-header">
         <img src="/assets/logo512.png" className="App-logo" alt="logo" />
         <p>Hello World!!</p>
-        <Counter></Counter>
       </header>
     </div>
   );
