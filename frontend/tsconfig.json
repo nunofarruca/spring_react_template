@@ -16,7 +16,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "isolatedModules": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true
     // "noEmit": true, why?
     // "allowJs": true,
   },

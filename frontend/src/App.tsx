@@ -6,9 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src="/assets/logo512.png" className="App-logo" alt="logo" />
-        <p>
-          Hello World!
-        </p>
+        <p>Hello World!</p>
         <Counter></Counter>
       </header>
     </div>

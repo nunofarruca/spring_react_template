@@ -9,11 +9,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @SpringBootApplication
 public class Application implements WebMvcConfigurer {
 
-    private static final Logger LOG = LoggerFactory.getLogger(Application.class);
+  private static final Logger LOG = LoggerFactory.getLogger(Application.class);
 
-    public static void main(final String... args) {
-        SpringApplication.run(Application.class, args);
-        LOG.info("================ Application started successfully ================");
-    }
+  public static void main(final String... args) {
+    SpringApplication.run(Application.class, args);
+    LOG.info("================ Application started successfully ================");
+  }
 
 }

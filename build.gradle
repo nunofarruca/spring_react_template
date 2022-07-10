@@ -1,16 +1,16 @@
 plugins {
-    id 'idea'
-    id 'java'
-    id 'java-library'
-    id 'org.springframework.boot' version "${springBootVersion}" apply(false)
+  id 'idea'
+  id 'java'
+  id 'java-library'
+  id 'org.springframework.boot' version "${springBootVersion}" apply(false)
 }
 
 subprojects {
-    apply plugin: 'idea'
-    apply plugin: 'java'
+  apply plugin: 'idea'
+  apply plugin: 'java'
 
-    repositories {
-        mavenCentral()
-    }
+  repositories {
+    mavenCentral()
+  }
 
 }
